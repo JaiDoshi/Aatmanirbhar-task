@@ -1,0 +1,47 @@
+<br>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Students</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Identification</th>
+      <th>Branch</th>
+      <th>Contact number</th>
+      <th>Recruitment year</th>
+      <th>Active</th>
+      <th>Projects or works</th>
+      <th>Role timeline</th>
+      <th>Skill set</th>
+      <th>Remarks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.Name %></td>
+        <td><%= student.Identification %></td>
+        <td><%= student.Branch %></td>
+        <td><%= student.Contact_number %></td>
+        <td><%= student.Recruitment_year %></td>
+        <td><%= student.Status %></td>
+        <td><%= student.Projects_or_works %></td>
+        <td><%= student.Role_timeline %></td>
+        <td><%= student.Skill_set %></td>
+        <td><%= student.Remarks %></td>
+        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student', new_student_path %>

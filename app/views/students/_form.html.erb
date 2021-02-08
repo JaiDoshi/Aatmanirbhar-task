@@ -1,0 +1,87 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :Name %>
+    <%= form.text_field :Name, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Identification %>
+    <%= form.text_field :Identification, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Branch %>
+    <%= form.text_field :Branch, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Contact_number %>
+    <%= form.text_field :Contact_number, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Recruitment_year %>
+    <%= form.number_field :Recruitment_year, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Active %>
+    <%= form.check_box :Status %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Projects_or_works %>
+    <%= form.text_area :Projects_or_works, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Role_timeline %>
+    <%= form.text_field :Role_timeline, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Skill_set %>
+    <%= form.text_field :Skill_set, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.label :Remarks %>
+    <%= form.text_field :Remarks, class:"form-control" %>
+  </div>
+
+  <br>
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary'%>
+  </div>
+<% end %>
