@@ -2,6 +2,14 @@
 
 <p id="notice"><%= notice %></p>
 
+<%= search_form_for @q do |f| %>
+
+  <%= f.label :Name_cont %>
+  <%= f.search_field :Name_cont %>
+
+  <%= f.submit %>
+<% end %>
+
 <h1>Students</h1>
 
 <table class="table">

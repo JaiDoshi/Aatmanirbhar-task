@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.7', '>= 4.7.3'
 
+gem 'ransack'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
